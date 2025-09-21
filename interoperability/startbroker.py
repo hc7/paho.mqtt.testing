@@ -19,7 +19,8 @@
 import mqtt, sys, logging
 
 if __name__ == "__main__":
-  formatter = logging.Formatter(fmt='%(levelname)s %(asctime)s %(message)s',  datefmt='%Y%m%d %H%M%S')
+  # formatter = logging.Formatter(fmt='%(levelname)s %(asctime)s %(message)s',  datefmt='%Y%m%d %H%M%S')
+  formatter = logging.Formatter(fmt='[%(levelname)10s] %(message)s')
   ch = logging.StreamHandler()
   ch.setFormatter(formatter)
   ch.setLevel(logging.DEBUG)
